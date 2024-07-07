@@ -72,8 +72,10 @@ FRAUD_ANALYSIS/
    cd fraud_analysis
    ```
 
-2. Set the path to the project repository:
+2. Set the windows or linux path to the project repository:
    ```
+   setx PYTHONPATH "%PYTHONPATH%;C:\path\to\the\fraud_analysis\"
+   
    export PYTHONPATH=$PYTHONPATH:/path/to/the/fraud_analysis/
 
    ```
