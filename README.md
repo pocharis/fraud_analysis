@@ -2,15 +2,15 @@
 
 ## Project Overview
 
-This project aims to develop a machine learning model to detect fraudulent transactions for a Integra's credit card system. The goal is to identify transactions that are likely to be fraudulent so that a team of fraud analysts can review them. The model will help in prioritizing the transactions for review, thereby maximizing the amount of fraud value that can be prevented.
+This project aims to develop a machine learning model to detect fraudulent transactions for Integra's credit card system. The goal is to identify transactions that are likely to be fraudulent so that a team of fraud analysts can review them. The model will help in prioritizing the transactions for review, thereby maximizing the amount of fraud value that can be prevented.
 
 ## Problem Statement
 
-A bank is facing a growing fraud problem where its customers' cards are being defrauded, causing customer dissatisfaction. Integra plans to introduce better transactional monitoring to identify and prevent fraudulent transactions. A small team of fraud analysts will review up to 400 transactions per month flagged by the model. The primary objective is to build a model that predicts the likelihood of a transaction being fraudulent based on historical data.
+Integra is facing a growing fraud problem where its customers' cards are being defrauded, causing customer dissatisfaction. Integra plans to introduce better transactional monitoring to identify and prevent fraudulent transactions. A small team of fraud analysts will review up to 400 transactions per month flagged by the model. The primary objective is to build a model that predicts the likelihood of a transaction being fraudulent based on historical data.
 
 ## Data
 
-The bank has provided 1 year of historical transactional data along with fraud flags. Additionally, a brief data dictionary describing some general payment terms is provided.
+Integra has provided 1 year of historical transactional data along with fraud flags. Additionally, a brief data dictionary describing some general payment terms is provided.
 
 ### Data Files
 
@@ -72,12 +72,12 @@ FRAUD_ANALYSIS/
    cd fraud_analysis
    ```
 
-2. Set the windows or linux path to the project repository:
+2. Set the project repository for Windows or Linux. Copy the path to folder and replace accordingly:
    ```
    setx PYTHONPATH "%PYTHONPATH%;C:\path\to\the\fraud_analysis\"
-   
+   ```
+   ```
    export PYTHONPATH=$PYTHONPATH:/path/to/the/fraud_analysis/
-
    ```
 
 3. Install the required dependencies:
@@ -85,20 +85,17 @@ FRAUD_ANALYSIS/
    pip install -r requirements.txt
    ```
 
+4. To run the complete pipeline from data ingestion to prediction, use the run pipeline script:
+   ```
+   python scripts/run_pipeline.py
+   ```
+
 
 ### Exploratory Data Analysis (EDA)
 
-Explore the data using the Jupyter notebook:
+Explore the data using the Jupyter notebook. Data exploration is done in the notebook folder:
 ```
-notebooks/exploratory_analysis.ipynb
-```
-
-
-### Run Complete Pipeline, takes approximately[] 
-
-To run the complete pipeline from data ingestion to prediction, use the run pipeline script:
-```bash
-python scripts/run_pipeline.py
+exploratory_analysis.ipynb
 ```
 
 ## Results

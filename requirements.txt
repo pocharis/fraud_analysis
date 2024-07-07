@@ -6,4 +6,5 @@ matplotlib
 scikit-learn
 imbalanced-learn
 tqdm
+ipython-autotime
 
