@@ -36,12 +36,12 @@ if __name__ == "__main__":
     model_report = train_and_evaluate_models(X_train, y_train, X_val, y_val, preprocessor)
 
     # Determine the best model
-    best_model_name = max(model_report, key=lambda x: model_report[x]["recall"])
+    best_model_name = max(model_report, key=lambda x: model_report[x]["roc_auc"])
     best_model_info = model_report[best_model_name]
     best_model = best_model_info["model"]
 
     print(f"Best Model: {best_model_name}")
-    print(f"Best Model ROC AUC Score: {best_model_info['recall']}")
+    print(f"Best Model ROC AUC Score: {best_model_info['roc_auc']}")
     print("Best Model Parameters:")
     print(best_model_info["best_params"])
     print(f"Accuracy: {best_model_info['accuracy']}")

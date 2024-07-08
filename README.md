@@ -85,7 +85,7 @@ FRAUD_ANALYSIS/
    pip install -r requirements.txt
    ```
 
-4. To run the complete pipeline from data ingestion to prediction, use the run pipeline script:
+4. To run the complete pipeline from data ingestion to prediction, run pipeline script on a terminal. By running this scripts, the data is loaded, pre-processed, split, used in training model and text sample to evaluate the performance of the model. If module not found error occurs, close the terminal and open again, then `echo %PYTHONPATH%` for windows or `echo $PYTHONPATH` for Linux, to make sure the paths were added:
    ```
    python scripts/run_pipeline.py
    ```

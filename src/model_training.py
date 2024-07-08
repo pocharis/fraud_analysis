@@ -29,9 +29,7 @@ def get_params():
             'classifier__n_estimators': [8, 16, 32, 64, 128, 256],
             'classifier__max_depth': [None, 10, 20, 30],
             'classifier__min_samples_leaf': [1, 2, 4],
-            'classifier__min_samples_split': [2, 5, 10],
-            'classifier__class_weight': ['balanced', 'balanced_subsample']
-
+            'classifier__class_weight': ['balanced']
         },
 
       "Gradient Boosting": {
@@ -59,7 +57,7 @@ def train_and_evaluate_models(X_train, y_train, X_val, y_val, preprocessor):
             ('classifier', models[model_name])
         ])
         
-        grid_search = GridSearchCV(estimator=pipeline, param_grid=params.get(model_name, {}), scoring='recall', cv=5, verbose=10)
+        grid_search = GridSearchCV(estimator=pipeline, param_grid=params.get(model_name, {}), scoring='roc_auc', cv=5, verbose=10)
         
         grid_search.fit(X_train, y_train)
         
